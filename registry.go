@@ -108,6 +108,7 @@ func (registry *registryImpl) DisposeAll() {
 	registry.EachMetric(func(name string, metric Metric) {
 		metric.Dispose()
 	})
+	registry.metricMap.Clear()
 }
 
 func (registry *registryImpl) IsValidMetric(name string) bool {
