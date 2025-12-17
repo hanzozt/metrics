@@ -267,12 +267,16 @@ func (registry *registryImpl) getRefCounted(name string, factory func() refCount
 }
 
 func (registry *registryImpl) disposeRefCounted(metric refCounted) {
-	registry.metricMap.RemoveCb(metric.Name(), func(key string, v Metric, exists bool) bool {
+	removed := registry.metricMap.RemoveCb(metric.Name(), func(key string, v Metric, exists bool) bool {
 		if !exists {
 			return true
 		}
 		return v == metric && metric.DecrRefCount() < 1
 	})
+
+	if removed {
+		metric.stop()
+	}
 }
 
 func (registry *registryImpl) Timer(name string) Timer {
