@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.19.1
-// source: ziti_metrics.proto
+// source: zt_metrics.proto
 
 package metrics_pb
 
@@ -25,7 +25,7 @@ type ContentType int32
 
 const (
 	ContentType_Zero        ContentType = 0
-	ContentType_MetricsType ContentType = 1007 // see ziti-fabric/pb/ctrl_pb/ctrl.proto
+	ContentType_MetricsType ContentType = 1007 // see zt-fabric/pb/ctrl_pb/ctrl.proto
 )
 
 // Enum value maps for ContentType.
@@ -51,11 +51,11 @@ func (x ContentType) String() string {
 }
 
 func (ContentType) Descriptor() protoreflect.EnumDescriptor {
-	return file_ziti_metrics_proto_enumTypes[0].Descriptor()
+	return file_zt_metrics_proto_enumTypes[0].Descriptor()
 }
 
 func (ContentType) Type() protoreflect.EnumType {
-	return &file_ziti_metrics_proto_enumTypes[0]
+	return &file_zt_metrics_proto_enumTypes[0]
 }
 
 func (x ContentType) Number() protoreflect.EnumNumber {
@@ -64,7 +64,7 @@ func (x ContentType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use ContentType.Descriptor instead.
 func (ContentType) EnumDescriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0}
 }
 
 type MetricsMessage struct {
@@ -89,7 +89,7 @@ type MetricsMessage struct {
 func (x *MetricsMessage) Reset() {
 	*x = MetricsMessage{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[0]
+		mi := &file_zt_metrics_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -102,7 +102,7 @@ func (x *MetricsMessage) String() string {
 func (*MetricsMessage) ProtoMessage() {}
 
 func (x *MetricsMessage) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[0]
+	mi := &file_zt_metrics_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -115,7 +115,7 @@ func (x *MetricsMessage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage.ProtoReflect.Descriptor instead.
 func (*MetricsMessage) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *MetricsMessage) GetEventId() string {
@@ -217,7 +217,7 @@ type MetricsMessage_Meter struct {
 func (x *MetricsMessage_Meter) Reset() {
 	*x = MetricsMessage_Meter{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[8]
+		mi := &file_zt_metrics_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -230,7 +230,7 @@ func (x *MetricsMessage_Meter) String() string {
 func (*MetricsMessage_Meter) ProtoMessage() {}
 
 func (x *MetricsMessage_Meter) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[8]
+	mi := &file_zt_metrics_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -243,7 +243,7 @@ func (x *MetricsMessage_Meter) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_Meter.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_Meter) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 7}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 7}
 }
 
 func (x *MetricsMessage_Meter) GetCount() int64 {
@@ -303,7 +303,7 @@ type MetricsMessage_Histogram struct {
 func (x *MetricsMessage_Histogram) Reset() {
 	*x = MetricsMessage_Histogram{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[9]
+		mi := &file_zt_metrics_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -316,7 +316,7 @@ func (x *MetricsMessage_Histogram) String() string {
 func (*MetricsMessage_Histogram) ProtoMessage() {}
 
 func (x *MetricsMessage_Histogram) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[9]
+	mi := &file_zt_metrics_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -329,7 +329,7 @@ func (x *MetricsMessage_Histogram) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_Histogram.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_Histogram) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 8}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 8}
 }
 
 func (x *MetricsMessage_Histogram) GetCount() int64 {
@@ -442,7 +442,7 @@ type MetricsMessage_Timer struct {
 func (x *MetricsMessage_Timer) Reset() {
 	*x = MetricsMessage_Timer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[10]
+		mi := &file_zt_metrics_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -455,7 +455,7 @@ func (x *MetricsMessage_Timer) String() string {
 func (*MetricsMessage_Timer) ProtoMessage() {}
 
 func (x *MetricsMessage_Timer) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[10]
+	mi := &file_zt_metrics_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -468,7 +468,7 @@ func (x *MetricsMessage_Timer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_Timer.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_Timer) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 9}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 9}
 }
 
 func (x *MetricsMessage_Timer) GetCount() int64 {
@@ -595,7 +595,7 @@ type MetricsMessage_IntervalCounter struct {
 func (x *MetricsMessage_IntervalCounter) Reset() {
 	*x = MetricsMessage_IntervalCounter{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[11]
+		mi := &file_zt_metrics_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -608,7 +608,7 @@ func (x *MetricsMessage_IntervalCounter) String() string {
 func (*MetricsMessage_IntervalCounter) ProtoMessage() {}
 
 func (x *MetricsMessage_IntervalCounter) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[11]
+	mi := &file_zt_metrics_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -621,7 +621,7 @@ func (x *MetricsMessage_IntervalCounter) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_IntervalCounter.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_IntervalCounter) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 10}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 10}
 }
 
 func (x *MetricsMessage_IntervalCounter) GetIntervalLength() uint64 {
@@ -650,7 +650,7 @@ type MetricsMessage_IntervalBucket struct {
 func (x *MetricsMessage_IntervalBucket) Reset() {
 	*x = MetricsMessage_IntervalBucket{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[12]
+		mi := &file_zt_metrics_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -663,7 +663,7 @@ func (x *MetricsMessage_IntervalBucket) String() string {
 func (*MetricsMessage_IntervalBucket) ProtoMessage() {}
 
 func (x *MetricsMessage_IntervalBucket) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[12]
+	mi := &file_zt_metrics_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -676,7 +676,7 @@ func (x *MetricsMessage_IntervalBucket) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_IntervalBucket.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_IntervalBucket) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 11}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 11}
 }
 
 func (x *MetricsMessage_IntervalBucket) GetIntervalStartUTC() int64 {
@@ -706,7 +706,7 @@ type MetricsMessage_UsageCounter struct {
 func (x *MetricsMessage_UsageCounter) Reset() {
 	*x = MetricsMessage_UsageCounter{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[13]
+		mi := &file_zt_metrics_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -719,7 +719,7 @@ func (x *MetricsMessage_UsageCounter) String() string {
 func (*MetricsMessage_UsageCounter) ProtoMessage() {}
 
 func (x *MetricsMessage_UsageCounter) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[13]
+	mi := &file_zt_metrics_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -732,7 +732,7 @@ func (x *MetricsMessage_UsageCounter) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_UsageCounter.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_UsageCounter) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 12}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 12}
 }
 
 func (x *MetricsMessage_UsageCounter) GetIntervalStartUTC() int64 {
@@ -768,7 +768,7 @@ type MetricsMessage_UsageBucket struct {
 func (x *MetricsMessage_UsageBucket) Reset() {
 	*x = MetricsMessage_UsageBucket{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ziti_metrics_proto_msgTypes[14]
+		mi := &file_zt_metrics_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -781,7 +781,7 @@ func (x *MetricsMessage_UsageBucket) String() string {
 func (*MetricsMessage_UsageBucket) ProtoMessage() {}
 
 func (x *MetricsMessage_UsageBucket) ProtoReflect() protoreflect.Message {
-	mi := &file_ziti_metrics_proto_msgTypes[14]
+	mi := &file_zt_metrics_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -794,7 +794,7 @@ func (x *MetricsMessage_UsageBucket) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MetricsMessage_UsageBucket.ProtoReflect.Descriptor instead.
 func (*MetricsMessage_UsageBucket) Descriptor() ([]byte, []int) {
-	return file_ziti_metrics_proto_rawDescGZIP(), []int{0, 13}
+	return file_zt_metrics_proto_rawDescGZIP(), []int{0, 13}
 }
 
 func (x *MetricsMessage_UsageBucket) GetValues() map[string]uint64 {
@@ -811,9 +811,9 @@ func (x *MetricsMessage_UsageBucket) GetTags() map[string]string {
 	return nil
 }
 
-var File_ziti_metrics_proto protoreflect.FileDescriptor
+var File_zt_metrics_proto protoreflect.FileDescriptor
 
-var file_ziti_metrics_proto_rawDesc = []byte{
+var file_zt_metrics_proto_rawDesc = []byte{
 	0x0a, 0x12, 0x7a, 0x69, 0x74, 0x69, 0x5f, 0x6d, 0x65, 0x74, 0x72, 0x69, 0x63, 0x73, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0f, 0x7a, 0x69, 0x74, 0x69, 0x2e, 0x6d, 0x65, 0x74, 0x72, 0x69,
 	0x63, 0x73, 0x2e, 0x70, 0x62, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72,
@@ -1019,62 +1019,62 @@ var file_ziti_metrics_proto_rawDesc = []byte{
 }
 
 var (
-	file_ziti_metrics_proto_rawDescOnce sync.Once
-	file_ziti_metrics_proto_rawDescData = file_ziti_metrics_proto_rawDesc
+	file_zt_metrics_proto_rawDescOnce sync.Once
+	file_zt_metrics_proto_rawDescData = file_zt_metrics_proto_rawDesc
 )
 
-func file_ziti_metrics_proto_rawDescGZIP() []byte {
-	file_ziti_metrics_proto_rawDescOnce.Do(func() {
-		file_ziti_metrics_proto_rawDescData = protoimpl.X.CompressGZIP(file_ziti_metrics_proto_rawDescData)
+func file_zt_metrics_proto_rawDescGZIP() []byte {
+	file_zt_metrics_proto_rawDescOnce.Do(func() {
+		file_zt_metrics_proto_rawDescData = protoimpl.X.CompressGZIP(file_zt_metrics_proto_rawDescData)
 	})
-	return file_ziti_metrics_proto_rawDescData
+	return file_zt_metrics_proto_rawDescData
 }
 
-var file_ziti_metrics_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_ziti_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
-var file_ziti_metrics_proto_goTypes = []interface{}{
-	(ContentType)(0),                       // 0: ziti.metrics.pb.ContentType
-	(*MetricsMessage)(nil),                 // 1: ziti.metrics.pb.MetricsMessage
-	nil,                                    // 2: ziti.metrics.pb.MetricsMessage.TagsEntry
-	nil,                                    // 3: ziti.metrics.pb.MetricsMessage.IntValuesEntry
-	nil,                                    // 4: ziti.metrics.pb.MetricsMessage.FloatValuesEntry
-	nil,                                    // 5: ziti.metrics.pb.MetricsMessage.MetersEntry
-	nil,                                    // 6: ziti.metrics.pb.MetricsMessage.HistogramsEntry
-	nil,                                    // 7: ziti.metrics.pb.MetricsMessage.IntervalCountersEntry
-	nil,                                    // 8: ziti.metrics.pb.MetricsMessage.TimersEntry
-	(*MetricsMessage_Meter)(nil),           // 9: ziti.metrics.pb.MetricsMessage.Meter
-	(*MetricsMessage_Histogram)(nil),       // 10: ziti.metrics.pb.MetricsMessage.Histogram
-	(*MetricsMessage_Timer)(nil),           // 11: ziti.metrics.pb.MetricsMessage.Timer
-	(*MetricsMessage_IntervalCounter)(nil), // 12: ziti.metrics.pb.MetricsMessage.IntervalCounter
-	(*MetricsMessage_IntervalBucket)(nil),  // 13: ziti.metrics.pb.MetricsMessage.IntervalBucket
-	(*MetricsMessage_UsageCounter)(nil),    // 14: ziti.metrics.pb.MetricsMessage.UsageCounter
-	(*MetricsMessage_UsageBucket)(nil),     // 15: ziti.metrics.pb.MetricsMessage.UsageBucket
-	nil,                                    // 16: ziti.metrics.pb.MetricsMessage.IntervalBucket.ValuesEntry
-	nil,                                    // 17: ziti.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry
-	nil,                                    // 18: ziti.metrics.pb.MetricsMessage.UsageBucket.ValuesEntry
-	nil,                                    // 19: ziti.metrics.pb.MetricsMessage.UsageBucket.TagsEntry
+var file_zt_metrics_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_zt_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 19)
+var file_zt_metrics_proto_goTypes = []interface{}{
+	(ContentType)(0),                       // 0: zt.metrics.pb.ContentType
+	(*MetricsMessage)(nil),                 // 1: zt.metrics.pb.MetricsMessage
+	nil,                                    // 2: zt.metrics.pb.MetricsMessage.TagsEntry
+	nil,                                    // 3: zt.metrics.pb.MetricsMessage.IntValuesEntry
+	nil,                                    // 4: zt.metrics.pb.MetricsMessage.FloatValuesEntry
+	nil,                                    // 5: zt.metrics.pb.MetricsMessage.MetersEntry
+	nil,                                    // 6: zt.metrics.pb.MetricsMessage.HistogramsEntry
+	nil,                                    // 7: zt.metrics.pb.MetricsMessage.IntervalCountersEntry
+	nil,                                    // 8: zt.metrics.pb.MetricsMessage.TimersEntry
+	(*MetricsMessage_Meter)(nil),           // 9: zt.metrics.pb.MetricsMessage.Meter
+	(*MetricsMessage_Histogram)(nil),       // 10: zt.metrics.pb.MetricsMessage.Histogram
+	(*MetricsMessage_Timer)(nil),           // 11: zt.metrics.pb.MetricsMessage.Timer
+	(*MetricsMessage_IntervalCounter)(nil), // 12: zt.metrics.pb.MetricsMessage.IntervalCounter
+	(*MetricsMessage_IntervalBucket)(nil),  // 13: zt.metrics.pb.MetricsMessage.IntervalBucket
+	(*MetricsMessage_UsageCounter)(nil),    // 14: zt.metrics.pb.MetricsMessage.UsageCounter
+	(*MetricsMessage_UsageBucket)(nil),     // 15: zt.metrics.pb.MetricsMessage.UsageBucket
+	nil,                                    // 16: zt.metrics.pb.MetricsMessage.IntervalBucket.ValuesEntry
+	nil,                                    // 17: zt.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry
+	nil,                                    // 18: zt.metrics.pb.MetricsMessage.UsageBucket.ValuesEntry
+	nil,                                    // 19: zt.metrics.pb.MetricsMessage.UsageBucket.TagsEntry
 	(*timestamppb.Timestamp)(nil),          // 20: google.protobuf.Timestamp
 }
-var file_ziti_metrics_proto_depIdxs = []int32{
-	20, // 0: ziti.metrics.pb.MetricsMessage.timestamp:type_name -> google.protobuf.Timestamp
-	2,  // 1: ziti.metrics.pb.MetricsMessage.tags:type_name -> ziti.metrics.pb.MetricsMessage.TagsEntry
-	3,  // 2: ziti.metrics.pb.MetricsMessage.intValues:type_name -> ziti.metrics.pb.MetricsMessage.IntValuesEntry
-	4,  // 3: ziti.metrics.pb.MetricsMessage.floatValues:type_name -> ziti.metrics.pb.MetricsMessage.FloatValuesEntry
-	5,  // 4: ziti.metrics.pb.MetricsMessage.meters:type_name -> ziti.metrics.pb.MetricsMessage.MetersEntry
-	6,  // 5: ziti.metrics.pb.MetricsMessage.histograms:type_name -> ziti.metrics.pb.MetricsMessage.HistogramsEntry
-	7,  // 6: ziti.metrics.pb.MetricsMessage.intervalCounters:type_name -> ziti.metrics.pb.MetricsMessage.IntervalCountersEntry
-	8,  // 7: ziti.metrics.pb.MetricsMessage.timers:type_name -> ziti.metrics.pb.MetricsMessage.TimersEntry
-	14, // 8: ziti.metrics.pb.MetricsMessage.usageCounters:type_name -> ziti.metrics.pb.MetricsMessage.UsageCounter
-	9,  // 9: ziti.metrics.pb.MetricsMessage.MetersEntry.value:type_name -> ziti.metrics.pb.MetricsMessage.Meter
-	10, // 10: ziti.metrics.pb.MetricsMessage.HistogramsEntry.value:type_name -> ziti.metrics.pb.MetricsMessage.Histogram
-	12, // 11: ziti.metrics.pb.MetricsMessage.IntervalCountersEntry.value:type_name -> ziti.metrics.pb.MetricsMessage.IntervalCounter
-	11, // 12: ziti.metrics.pb.MetricsMessage.TimersEntry.value:type_name -> ziti.metrics.pb.MetricsMessage.Timer
-	13, // 13: ziti.metrics.pb.MetricsMessage.IntervalCounter.buckets:type_name -> ziti.metrics.pb.MetricsMessage.IntervalBucket
-	16, // 14: ziti.metrics.pb.MetricsMessage.IntervalBucket.values:type_name -> ziti.metrics.pb.MetricsMessage.IntervalBucket.ValuesEntry
-	17, // 15: ziti.metrics.pb.MetricsMessage.UsageCounter.buckets:type_name -> ziti.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry
-	18, // 16: ziti.metrics.pb.MetricsMessage.UsageBucket.values:type_name -> ziti.metrics.pb.MetricsMessage.UsageBucket.ValuesEntry
-	19, // 17: ziti.metrics.pb.MetricsMessage.UsageBucket.tags:type_name -> ziti.metrics.pb.MetricsMessage.UsageBucket.TagsEntry
-	15, // 18: ziti.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry.value:type_name -> ziti.metrics.pb.MetricsMessage.UsageBucket
+var file_zt_metrics_proto_depIdxs = []int32{
+	20, // 0: zt.metrics.pb.MetricsMessage.timestamp:type_name -> google.protobuf.Timestamp
+	2,  // 1: zt.metrics.pb.MetricsMessage.tags:type_name -> zt.metrics.pb.MetricsMessage.TagsEntry
+	3,  // 2: zt.metrics.pb.MetricsMessage.intValues:type_name -> zt.metrics.pb.MetricsMessage.IntValuesEntry
+	4,  // 3: zt.metrics.pb.MetricsMessage.floatValues:type_name -> zt.metrics.pb.MetricsMessage.FloatValuesEntry
+	5,  // 4: zt.metrics.pb.MetricsMessage.meters:type_name -> zt.metrics.pb.MetricsMessage.MetersEntry
+	6,  // 5: zt.metrics.pb.MetricsMessage.histograms:type_name -> zt.metrics.pb.MetricsMessage.HistogramsEntry
+	7,  // 6: zt.metrics.pb.MetricsMessage.intervalCounters:type_name -> zt.metrics.pb.MetricsMessage.IntervalCountersEntry
+	8,  // 7: zt.metrics.pb.MetricsMessage.timers:type_name -> zt.metrics.pb.MetricsMessage.TimersEntry
+	14, // 8: zt.metrics.pb.MetricsMessage.usageCounters:type_name -> zt.metrics.pb.MetricsMessage.UsageCounter
+	9,  // 9: zt.metrics.pb.MetricsMessage.MetersEntry.value:type_name -> zt.metrics.pb.MetricsMessage.Meter
+	10, // 10: zt.metrics.pb.MetricsMessage.HistogramsEntry.value:type_name -> zt.metrics.pb.MetricsMessage.Histogram
+	12, // 11: zt.metrics.pb.MetricsMessage.IntervalCountersEntry.value:type_name -> zt.metrics.pb.MetricsMessage.IntervalCounter
+	11, // 12: zt.metrics.pb.MetricsMessage.TimersEntry.value:type_name -> zt.metrics.pb.MetricsMessage.Timer
+	13, // 13: zt.metrics.pb.MetricsMessage.IntervalCounter.buckets:type_name -> zt.metrics.pb.MetricsMessage.IntervalBucket
+	16, // 14: zt.metrics.pb.MetricsMessage.IntervalBucket.values:type_name -> zt.metrics.pb.MetricsMessage.IntervalBucket.ValuesEntry
+	17, // 15: zt.metrics.pb.MetricsMessage.UsageCounter.buckets:type_name -> zt.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry
+	18, // 16: zt.metrics.pb.MetricsMessage.UsageBucket.values:type_name -> zt.metrics.pb.MetricsMessage.UsageBucket.ValuesEntry
+	19, // 17: zt.metrics.pb.MetricsMessage.UsageBucket.tags:type_name -> zt.metrics.pb.MetricsMessage.UsageBucket.TagsEntry
+	15, // 18: zt.metrics.pb.MetricsMessage.UsageCounter.BucketsEntry.value:type_name -> zt.metrics.pb.MetricsMessage.UsageBucket
 	19, // [19:19] is the sub-list for method output_type
 	19, // [19:19] is the sub-list for method input_type
 	19, // [19:19] is the sub-list for extension type_name
@@ -1082,13 +1082,13 @@ var file_ziti_metrics_proto_depIdxs = []int32{
 	0,  // [0:19] is the sub-list for field type_name
 }
 
-func init() { file_ziti_metrics_proto_init() }
-func file_ziti_metrics_proto_init() {
-	if File_ziti_metrics_proto != nil {
+func init() { file_zt_metrics_proto_init() }
+func file_zt_metrics_proto_init() {
+	if File_zt_metrics_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_ziti_metrics_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage); i {
 			case 0:
 				return &v.state
@@ -1100,7 +1100,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_Meter); i {
 			case 0:
 				return &v.state
@@ -1112,7 +1112,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_Histogram); i {
 			case 0:
 				return &v.state
@@ -1124,7 +1124,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_Timer); i {
 			case 0:
 				return &v.state
@@ -1136,7 +1136,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_IntervalCounter); i {
 			case 0:
 				return &v.state
@@ -1148,7 +1148,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_IntervalBucket); i {
 			case 0:
 				return &v.state
@@ -1160,7 +1160,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_UsageCounter); i {
 			case 0:
 				return &v.state
@@ -1172,7 +1172,7 @@ func file_ziti_metrics_proto_init() {
 				return nil
 			}
 		}
-		file_ziti_metrics_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_zt_metrics_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MetricsMessage_UsageBucket); i {
 			case 0:
 				return &v.state
@@ -1189,19 +1189,19 @@ func file_ziti_metrics_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_ziti_metrics_proto_rawDesc,
+			RawDescriptor: file_zt_metrics_proto_rawDesc,
 			NumEnums:      1,
 			NumMessages:   19,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_ziti_metrics_proto_goTypes,
-		DependencyIndexes: file_ziti_metrics_proto_depIdxs,
-		EnumInfos:         file_ziti_metrics_proto_enumTypes,
-		MessageInfos:      file_ziti_metrics_proto_msgTypes,
+		GoTypes:           file_zt_metrics_proto_goTypes,
+		DependencyIndexes: file_zt_metrics_proto_depIdxs,
+		EnumInfos:         file_zt_metrics_proto_enumTypes,
+		MessageInfos:      file_zt_metrics_proto_msgTypes,
 	}.Build()
-	File_ziti_metrics_proto = out.File
-	file_ziti_metrics_proto_rawDesc = nil
-	file_ziti_metrics_proto_goTypes = nil
-	file_ziti_metrics_proto_depIdxs = nil
+	File_zt_metrics_proto = out.File
+	file_zt_metrics_proto_rawDesc = nil
+	file_zt_metrics_proto_goTypes = nil
+	file_zt_metrics_proto_depIdxs = nil
 }

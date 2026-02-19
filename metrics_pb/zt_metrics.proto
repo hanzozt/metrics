@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ziti.metrics.pb;
+package zt.metrics.pb;
 
 option go_package = "github.com/hanzozt/metrics/metrics_pb";
 
@@ -8,7 +8,7 @@ import "google/protobuf/timestamp.proto";
 
 enum ContentType {
   Zero = 0;
-  MetricsType = 1007; // see ziti-fabric/pb/ctrl_pb/ctrl.proto
+  MetricsType = 1007; // see zt-fabric/pb/ctrl_pb/ctrl.proto
 }
 
 message MetricsMessage {
