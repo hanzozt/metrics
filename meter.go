@@ -17,7 +17,7 @@
 package metrics
 
 import (
-	"github.com/openziti/foundation/v2/concurrenz"
+	"github.com/hanzozt/foundation/v2/concurrenz"
 	"github.com/rcrowley/go-metrics"
 )
 

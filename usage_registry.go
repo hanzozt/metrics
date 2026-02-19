@@ -3,7 +3,7 @@ package metrics
 import (
 	"fmt"
 	"github.com/michaelquigley/pfxlog"
-	"github.com/openziti/metrics/metrics_pb"
+	"github.com/hanzozt/metrics/metrics_pb"
 	cmap "github.com/orcaman/concurrent-map/v2"
 	"reflect"
 	"sort"

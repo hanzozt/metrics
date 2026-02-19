@@ -1,7 +1,7 @@
 package metrics
 
 import (
-	"github.com/openziti/metrics/metrics_pb"
+	"github.com/hanzozt/metrics/metrics_pb"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
